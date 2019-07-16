@@ -13,12 +13,11 @@
 		<property name="dataSource" ref="mysqlDataSource" />
 	</bean>
 	
-	<bean id="mysqlDataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-
-		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+	<bean id="mysqlDataSource" class="org.apache.commons.dbcp2.BasicDataSource">
+		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
 		<property name="url" value="jdbc:mysql://localhost:3306/employee_db" />
 		<property name="username" value="root" />
-		<property name="password" value="root" />
+		<property name="password" value="Sapient123" />
 	</bean>
 
 	<context:component-scan
